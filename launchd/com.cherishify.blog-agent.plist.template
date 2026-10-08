@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Zeitplan für den Blog-Agenten (lokal, macOS).
+  Läuft jeden Montag 08:00; run-cycle.sh --scheduled überspringt Wochen, in denen der letzte
+  Lauf < 13 Tage her ist → effektiv alle 2 Wochen. War der Mac zur Laufzeit im Ruhezustand,
+  holt launchd den Lauf beim Aufwachen nach (bei ausgeschaltetem Mac nicht).
+
+  Installation (erst nach erfolgreichem manuellem Testlauf):
+    sed "s|__AGENT_ROOT__|$HOME/cherishify-blog-agent|g" launchd/com.cherishify.blog-agent.plist.template \
+      > ~/Library/LaunchAgents/com.cherishify.blog-agent.plist
+    launchctl load ~/Library/LaunchAgents/com.cherishify.blog-agent.plist
+  Entfernen:
+    launchctl unload ~/Library/LaunchAgents/com.cherishify.blog-agent.plist && rm ~/Library/LaunchAgents/com.cherishify.blog-agent.plist
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.cherishify.blog-agent</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>__AGENT_ROOT__/scripts/run-cycle.sh</string>
+    <string>--scheduled</string>
+    <string>--with-local-changes</string>
+  </array>
+  <key>WorkingDirectory</key><string>__AGENT_ROOT__</string>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>1</integer>
+    <key>Hour</key><integer>8</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key><string>__AGENT_ROOT__/logs/launchd.out.log</string>
+  <key>StandardErrorPath</key><string>__AGENT_ROOT__/logs/launchd.err.log</string>
+</dict>
+</plist>

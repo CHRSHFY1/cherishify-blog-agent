@@ -1,0 +1,7 @@
+.DS_Store
+# Arbeitsordner & Laufzeit — nicht versionieren
+worktrees/
+out/
+logs/
+state/last-run
+state/site-snapshot/
