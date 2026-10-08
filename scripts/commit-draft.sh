@@ -21,7 +21,8 @@ if [ -n "$bad" ]; then
 fi
 git diff --cached --quiet && die "Keine Änderungen zu committen"
 
-title="$(grep -m1 -E '^\s*title:' "src/content/blog/posts/$slug.ts" | sed -E 's/^\s*title:\s*"?//; s/",?\s*$//')"
+title="$(sed -n -E 's/^[[:space:]]*title:[[:space:]]*"(.*)",?[[:space:]]*$/\1/p' "src/content/blog/posts/$slug.ts" | head -1)"
+[ -n "$title" ] || title="$slug"
 git commit -q -m "blog: $title (Entwurf zur Freigabe)
 
 Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
