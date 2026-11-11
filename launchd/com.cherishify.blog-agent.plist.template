@@ -21,7 +21,6 @@
     <string>/bin/bash</string>
     <string>__AGENT_ROOT__/scripts/run-cycle.sh</string>
     <string>--scheduled</string>
-    <string>--with-local-changes</string>
   </array>
   <key>WorkingDirectory</key><string>__AGENT_ROOT__</string>
   <key>StartCalendarInterval</key>

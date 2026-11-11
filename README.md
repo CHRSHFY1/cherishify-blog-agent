@@ -31,7 +31,7 @@ run-cycle.sh ──► Recherche ──► reports/<datum>-topics.md
 | `./scripts/publish.sh <slug>` | Nach dem Merge: Build + Delta-ZIP |
 | `./scripts/mark-deployed.sh` | Nach dem Upload: Live-Stand festhalten |
 
-Optionen für `run-cycle.sh`: `--with-local-changes` (uncommittete Änderungen des Website-Repos in den Worktree übernehmen — nur nötig, solange das Autoren-Feature nicht in `main` ist), `--budget=<USD>`.
+Optionen für `run-cycle.sh`: `--with-local-changes` (uncommittete Änderungen des Website-Repos in den Worktree übernehmen — seit das Autoren-Feature in `main` ist, nicht mehr nötig und im Zeitplan nicht aktiv), `--budget=<USD>`.
 
 ## Verzeichnisse
 
