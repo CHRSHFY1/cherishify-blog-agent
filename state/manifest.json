@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-19T09:46:12.161Z",
+  "generatedAt": "2026-11-19T11:46:20.398Z",
   "files": {
     ".htaccess": "a02a44ca11e06f1b0b0aa2b734a8cbfbb43bc9693097780b4e4f781912878b91",
     "CHERISHIFY_Business_PP.pdf": "5b6c588c06739847fef58e686795b7c5e3e1a8c9e21ff8755f4e43c62769c27c",
-    "api/.htaccess": "b6268c70f9f8a27ed889bbbda8f11218e4344c7c8bb6b93f13e824988d049a99",
+    "api/.htaccess": "dbee0d204db614b13bbcb3724940919735b35a026a74485b09bedf5800b2dda6",
     "api/README.md": "a6346bd30ae934aae831fb8fa52e2b79f2f45e20ab9410c192d1560876a144e6",
     "api/config.sample.php": "3b34cdfebcd47357a1d0a54cf6bc52d15bfacf535010d6763c1e9f5df9337d56",
     "api/lib/PHPMailer/Exception.php": "22ab858ae438d98f58f41f38ad2191d1b0d59570aebea0463a7948cfae1021b7",
