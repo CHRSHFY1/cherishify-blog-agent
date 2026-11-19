@@ -31,7 +31,8 @@ Pflichtfelder: `title`, `slug`, `excerpt`, `publicationDate`, `author`, `categor
 - Ein Ziel-Keyword im H1, im ersten Absatz, in `seoTitle` und `metaDescription` — natürlich, nie gestopft.
 - Erster Absatz beantwortet die Kernfrage in 2–3 Sätzen (für Google-Snippets und KI-Antworten).
 - H2/H3 als echte Fragen oder klare Aussagen; Länge typischerweise 1.200–2.000 Wörter, so lang wie nötig, nicht länger.
-- FAQ-Abschnitt am Ende (3–5 echte Fragen von HR-Teams).
+- FAQ-Abschnitt am Ende (3–5 echte Fragen von HR-Teams): H2 „Häufige Fragen“, jede Frage aufklappbar als `<details><summary>Frage</summary><p>Antwort</p></details>` (Stil steckt in `.blog-prose` in `src/index.css`; nicht mit `<h3>` + `<p>` schreiben).
+- Sprache einfach halten (kurze Sätze, wenig Fachjargon). „Stand: <Monat Jahr>“ höchstens einmal, im `excerpt` (Subheader); Quellenstände wie „WKO, Stand 1. Jänner 2026“ nur beim ersten Auftreten.
 - Interne Links: mindestens 3, u. a. auf `/preise`, `/mehrwert`, `/markenkatalog`, `/kontakt` oder verwandte Beiträge. Linktexte beschreibend, nie „hier klicken“.
 - Eine klare Handlungsaufforderung am Ende (Gespräch vereinbaren).
 
